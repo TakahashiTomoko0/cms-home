@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 
 
-Route::get('/test/func', 'TestContoroller@func');
+Route::get('/test/func', [App\Http\Controllers\TestController::class, 'func']);
