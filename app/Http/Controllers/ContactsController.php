@@ -75,8 +75,23 @@ class ContactsController extends Controller
             // 二重送信対策のためトークンを再発行
             $request->session()->regenerateToken();
     
-            // 送信完了ページのviewを表示
-            return view('contact.thanks');
+            // セッションにデータを保存
+            session(['inputs' => $inputs]);
+    
+            // thanksページにリダイレクト
+            // return redirect()->route('contact.thanks');
+
+            // thanksページに表示
+            return view('contact.thanks', [
+                'inputs' => $inputs,
+            ]);
         }
     }
+    
+//     public function thanks()
+//     {
+//         // セッションからデータを取得
+//         $inputs = session('inputs');
+//         return view('contact.thanks', compact('inputs'));
+//     }
 }

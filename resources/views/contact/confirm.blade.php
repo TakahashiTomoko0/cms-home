@@ -7,11 +7,7 @@
         @csrf
 
         <div class="space-y-6">
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">メールアドレス</label>
-                <p class="text-lg border-b border-gray-300 pb-1">{{ $inputs['email'] }}</p>
-                <input name="email" value="{{ $inputs['email'] }}" type="hidden">
-            </div>
+
 
             <div class="mb-4">
                 <label class="block text-sm font-medium text-gray-700 mb-1">会社名</label>
@@ -25,12 +21,19 @@
                 <input name="userName" value="{{ $inputs['userName'] }}" type="hidden">
             </div>
 
+            
             <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">電話番号</label>
-                <p class="text-lg border-b border-gray-300 pb-1">{{ $inputs['phoneNumber'] }}</p>
-                <input name="phoneNumber" value="{{ $inputs['phoneNumber'] }}" type="hidden">
+              <label class="block text-sm font-medium text-gray-700 mb-1">電話番号</label>
+              <p class="text-lg border-b border-gray-300 pb-1">{{ $inputs['phoneNumber'] }}</p>
+              <input name="phoneNumber" value="{{ $inputs['phoneNumber'] }}" type="hidden">
             </div>
-
+            
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1">メールアドレス</label>
+                <p class="text-lg border-b border-gray-300 pb-1">{{ $inputs['email'] }}</p>
+                <input name="email" value="{{ $inputs['email'] }}" type="hidden">
+            </div>
+            
             <div class="mb-4">
                 <label class="block text-sm font-medium text-gray-700 mb-1">生年月日</label>
                 <p class="text-lg border-b border-gray-300 pb-1">{{ $inputs['birthDate'] }}</p>
