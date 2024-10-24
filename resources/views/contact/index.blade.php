@@ -8,7 +8,16 @@
             </h1>
 
             @csrf
-
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            
             <div class="flex items-center">
                 <span class="bg-emerald-500 text-white font-bold rounded px-2 py-1 w-16 text-center mr-2 flex-shrink-0">必須</span>
                 <label class="block text-sm font-medium text-gray-700 w-32">会社名</label>
